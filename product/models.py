@@ -53,7 +53,7 @@ class Product(models.Model):
 class ProductGalleryImage(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE, null=True, blank=False,
                                 related_name='gallery')
-    image = ResizedImageField(size=[720, 440], quality=95, force_format='WEBP', upload_to='product/gallery',
+    image = ResizedImageField(size=[420, 420], quality=95, force_format='WEBP', upload_to='product/gallery',
                               blank=False, null=True)
     imageThumb = models.ImageField(upload_to='product/gallery/', blank=True, null=True, editable=False)
     is_main = models.BooleanField('Основная картинка', default=False)

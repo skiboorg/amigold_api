@@ -25,6 +25,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/product/', include('product.urls')),
     path('api/cart/', include('cart.urls')),
+    path('api/order/', include('order.urls')),
+    path('api/form/', include('form.urls')),
 
     # path('static_data/', include('static_page.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),

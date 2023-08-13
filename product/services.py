@@ -17,7 +17,7 @@ def create_thumb(image):
     width, height = base_image.size
     transparent = Image.new('RGB', (width, height), (0, 0, 0, 0))
     transparent.paste(base_image, (0, 0))
-    transparent.thumbnail((135, 100), Image.LANCZOS)
+    transparent.thumbnail((120, 120), Image.LANCZOS)
 
     transparent.save(blob, 'JPEG', quality=100)
     return blob
