@@ -7,7 +7,7 @@ django-nested-inline
 django-resized
 pillow
 pytils
-
+drf-yasg
 
 
 
