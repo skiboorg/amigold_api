@@ -16,7 +16,7 @@ class OrderItem(models.Model):
     product = models.ForeignKey('product.Product', on_delete=models.CASCADE, blank=True, null=True)
     productPrice = models.ForeignKey('product.ProductPrice', on_delete=models.CASCADE, blank=True, null=True)
     amount = models.IntegerField(blank=True, null=True)
-    totalPrice = models.DecimalField(decimal_places=2, max_digits=6, blank=True, null=True)
+    totalPrice = models.DecimalField(decimal_places=2, max_digits=8, blank=True, null=True)
 
 
 
