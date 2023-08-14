@@ -18,7 +18,8 @@ class UpdateCart(APIView):
     def post(self, request):
         data = request.data
         session_id = data['session_id']
-        cart = Cart.objects.get(sessionID=session_id)
+        # cart = Cart.objects.get(sessionID=session_id)
+        cart, _ = Cart.objects.get_or_create(sessionID=session_id)
         if data['action'] == 'add_amount':
             cartItem, created = CartItem.objects.get_or_create(
                 cart=cart,
