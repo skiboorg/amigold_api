@@ -50,6 +50,7 @@ class ProductShortSerializer(serializers.ModelSerializer):
             'shortDescription',
             'image',
             'prices',
+            'productType'
         ]
 
     def get_image(self, obj):
