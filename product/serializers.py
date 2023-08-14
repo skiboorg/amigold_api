@@ -40,6 +40,7 @@ class ProductSerializer(serializers.ModelSerializer):
 class ProductShortSerializer(serializers.ModelSerializer):
     prices = ProductPriceSerializer(many=True, required=False, read_only=True)
     image = serializers.SerializerMethodField()
+    productType = ProductTypeSerializer(many=True, required=False, read_only=True)
     class Meta:
         model = Product
         fields = [
