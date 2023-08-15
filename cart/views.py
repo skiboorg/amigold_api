@@ -5,6 +5,7 @@ from .serializers import *
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from django.views.decorators.csrf import csrf_exempt
 
 def calcCart(cart):
     totalPrice = 0
@@ -15,6 +16,7 @@ def calcCart(cart):
     return
 
 class UpdateCart(APIView):
+    @csrf_exempt
     def post(self, request):
         data = request.data
         session_id = data['session_id']
